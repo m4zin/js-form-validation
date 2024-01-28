@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    min-height: fit-content;
+    width: fit-content;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+form button {
+    padding: 5px;
+}
+
+span {
+    color: red;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid black;
+}

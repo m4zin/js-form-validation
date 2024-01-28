@@ -7,6 +7,54 @@
     <title>New Project</title>
 </head>
 <body>
+
+    <!-- Custom validation is done, hence novalidate. -->
+    <form action="#" novalidate>
+        <!-- Name -->
+        <label for="name">(*) Name:
+            <input type="text" name="name" id="name" pattern="[a-zA-Z]+" required>
+            <br>
+            <span class="name-error"></span>
+        </label>
+
+        <!-- Email -->
+        <label for="mail">(*) Email:
+            <input type="email" name="mail" id="mail" minlength="8" required>
+            <br>
+            <span class="mail-error"></span>
+        </label>
+
+        <!-- Country -->
+        <label for="country">Country:
+            <select name="country" id="country">
+                <option value="India">India</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Malaysia">Malaysia</option>
+            </select>
+        </label>
+
+        <!-- Zip Code -->
+        <label for="zip">(*) ZIP Code:
+            <input type="number" name="zip" id="zip" placeholder="000000" required>
+            <br>
+            <span class="zip-error"></span>
+        </label>
+
+        <!-- Password / Confirm Password -->
+        <label for="password">(*) Password:
+            <input type="password" name="password" id="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+            <br>
+            <span class="password-error"></span>
+        </label>
+        <label for="confirm-password">(*) Confirm password:
+            <input type="password" name="confirm-password" id="confirmPwd" required>
+            <br>
+            <span class="confirm-error"></span>
+        </label>
+
+        <button>Submit</button>
+    </form>
     
 </body>
 </html>
